@@ -1,0 +1,10 @@
+<hr>
+<h1>UserComponent</h1>
+{{ users | json }}
+<hr>
+<app-user-new (createNewUserEvent)="create($event)"></app-user-new>
+<hr>
+<app-user-list [users] = "users"
+ (destroyUserEvent) = "destroy($event)"
+ (updateUserEvent) = "update($event)"
+ ></app-user-list>
